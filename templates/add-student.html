@@ -1,0 +1,20 @@
+{% extends "template.html" %}
+{% block content %}
+
+
+    <div class="section section--submit">
+        <h2>Add Student:</h2>
+
+        <form action="" method="POST">
+            <input type="text" name="fname" placeholder="First Name" value="{{ request.form.fname }}"></input>
+            <input type="text" name="lname" placeholder="Last Name" value="{{ request.form.lname }}"></input>
+            <input type="submit" class="button" value="Add"></input>
+        </form>
+
+        {%for message in get_flashed_messages() %}
+            <p class="errorMessage">{{ message }}</p>
+        {% endfor %}
+    </div>
+
+
+{% endblock %}

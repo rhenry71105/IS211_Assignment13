@@ -1,0 +1,225 @@
+body, html  {
+	height: 100%;
+	width: 100%;
+	height: 100vh;
+	width: 100vw;
+}
+
+
+body {
+	font-size: 12px;
+	font-family: Helvetica, sans-serif;
+}
+
+select,
+input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	outline: none;
+	outline: none;
+	height: 1.25rem;
+	line-height: 1.25rem;
+	border: 1px solid #ccc;
+	border-radius: 0;
+	display: inline-block;
+	height: 2rem;
+	padding: 0 0.5rem;
+	margin-left: 0.25rem;
+	box-sizing: border-box;
+}
+
+input[hidden] {
+	display: none;
+}
+
+.container {
+	margin-top: 7rem;
+}
+
+table {
+	width: 100%;
+	font-family: "Helvetica Neue", sans-serif;
+	color:#666;
+	text-shadow: 1px 1px 0px #fff;
+	background:#eaebec;
+	border:#ccc 1px solid;
+	border-spacing: 0;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+
+	-moz-box-shadow: 0 1px 2px #d1d1d1;
+	-webkit-box-shadow: 0 1px 2px #d1d1d1;
+	box-shadow: 0 1px 2px #d1d1d1;
+}
+
+th {
+	padding:21px 25px 22px 25px;
+	border-top:1px solid #fafafa;
+	border-bottom:1px solid #e0e0e0;
+	text-transform: uppercase;
+
+	background: #ededed;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
+	background: -moz-linear-gradient(top,  #ededed,  #ebebeb);
+}
+
+th:first-child{
+	text-align: left;
+	padding-left:20px;
+}
+
+tr:first-child th:first-child{
+	-moz-border-radius-topleft:3px;
+	-webkit-border-top-left-radius:3px;
+	border-top-left-radius:3px;
+}
+
+tr:first-child th:last-child {
+	-moz-border-radius-topright:3px;
+	-webkit-border-top-right-radius:3px;
+	border-top-right-radius:3px;
+}
+
+tr {
+	text-align: center;
+	padding-left:20px;
+}
+tr td:first-child {
+	text-align: left;
+	padding-left:20px;
+	border-left: 0;
+}
+
+tr td {
+	padding:18px;
+	border-top: 1px solid #ffffff;
+	border-bottom:1px solid #e0e0e0;
+	border-left: 1px solid #e0e0e0;
+
+	background: #fafafa;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
+	background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);
+}
+
+tr.even td{
+	background: #f6f6f6;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f6f6f6));
+	background: -moz-linear-gradient(top,  #f8f8f8,  #f6f6f6);
+}
+
+tr:last-child td {
+	border-bottom:0;
+}
+
+tr:last-child td:first-child {
+	-moz-border-radius-bottomleft:3px;
+	-webkit-border-bottom-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+
+tr:last-child td:last-child {
+	-moz-border-radius-bottomright:3px;
+	-webkit-border-bottom-right-radius:3px;
+	border-bottom-right-radius:3px;
+}
+
+tr:hover td {
+	background: #f2f2f2;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
+	background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);
+}
+
+.button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	outline: none;
+	border: 0;
+	padding: 0 1.25em;
+	font-weight: 500;
+	color: #fff;
+	text-transform: uppercase;
+	background-color: #c81414;
+	-webkit-transition: ease-in 0.218s;
+	-o-transition: ease-in 0.218s;
+	transition: ease-in 0.218s;
+}
+
+.button:hover {
+	background-color: #00FF00;
+}
+
+.section {
+	width: 75%;
+	min-width: 28rem;
+	margin: 3rem auto;
+}
+
+.section--actions {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+.emptyList {
+	font-weight: 500;
+	text-transform: uppercase;
+	font-size: 1.85em;
+}
+
+
+/*****************************/
+/******** ERRORS  ***********/
+/*****************************/
+
+.task-error .task,
+.email-error .email,
+.priority-error .priority {
+	border: 1px solid #c81414;
+}
+
+.errorMessage {
+	color: #c81414;
+	font-size: 0.8em;
+	margin: 1rem 0.25rem;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+/*****************************/
+/******** NAV  ***********/
+/*****************************/
+.nav {
+	width: auto;
+	top: 0;
+	margin: 0 auto;
+	padding: 0;
+	margin-left: 12.5%;
+	position: absolute;
+	list-style: none;
+}
+
+.nav li {
+	display:inline
+}
+
+.nav li a {
+	text-decoration: none;
+	padding: 0.5rem 1rem;
+	background: #696969;
+	color: #eee;
+	float: left;
+	text-align: center;
+	border-left: 1px solid #fff;
+	text-transform: uppercase;
+	font-size: 0.8em;
+}
+
+.nav li a:hover {
+	background: #939292;
+}
+

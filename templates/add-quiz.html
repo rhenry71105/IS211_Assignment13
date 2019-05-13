@@ -1,0 +1,41 @@
+{% extends "template.html" %}
+{% block content %}
+
+
+    <div class="section section--submit">
+        <h2>Add Quiz:</h2>
+
+        <form action="" method="POST">
+            <input type="text" name="subject" placeholder="Subject" value="{{ request.form.subject }}"></input>
+
+            <input type="text" name="questions" placeholder="Number of Questions" value="{{ request.form.questions }}"></input>
+
+            <select name="day">
+                <option value=''>Select Day</option>
+                {% for n in range(1,32) %}
+                  <option value="{{ n }}">{{ n }}</option>
+                {% endfor %}
+            </select>
+
+             <select name="month">
+                <option value=''>Select Month</option>
+                {% for n in months %}
+                  <option value="{{ n }}">{{ n }}</option>
+                {% endfor %}
+            </select>
+
+            <select name="year">
+                <option value=''>Select Year</option>
+                {% for n in range(2015,2025) %}
+                  <option value="{{ n }}">{{ n }}</option>
+                {% endfor %}
+            </select>
+
+            <input type="submit" class="button" value="Add"></input>
+        </form>
+
+        {%for message in get_flashed_messages() %}
+            <p class="errorMessage">{{ message }}</p>
+        {% endfor %}
+    </div>
+{% endblock %}

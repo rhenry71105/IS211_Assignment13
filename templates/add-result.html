@@ -1,0 +1,39 @@
+{% extends "template.html" %}
+{% block content %}
+
+    <div class="section section--submit">
+        <h2>Add Quiz Result:</h2>
+
+        <form action="" method="POST">
+
+            <select name="student">
+                <option value=''>Select Student</option>
+                {% for n in students %}
+                    <option value="{{ n }}">{{ n }}</option>
+                {% endfor %}
+            </select>
+
+            <select name="quiz">
+                <option value=''>Select Quiz</option>
+                {% for n in quizzes %}
+                    <option value="{{ n }}">{{ n }}</option>
+                {% endfor %}
+            </select>
+
+            <select name="score">
+                <option value=''>Add Score</option>
+                {% for n in range(0,101) %}
+                  <option value="{{ n }}">{{ n }}</option>
+                {% endfor %}
+            </select>
+
+            <input type="submit" class="button" value="Submit"></input>
+        </form>
+
+        {%for message in get_flashed_messages() %}
+            <p class="errorMessage">{{ message }}</p>
+        {% endfor %}
+    </div>
+
+
+{% endblock %}

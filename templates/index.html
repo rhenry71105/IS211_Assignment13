@@ -1,0 +1,61 @@
+{% extends "template.html" %}
+{% block content %}
+
+
+    <div class='section section--display'>
+        <h2>Students List:</h2>
+        <table >
+            <thead>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </thead>
+            <tbody>
+                 {% for student in students %}
+                    <tr>
+                        <td>{{ student.id }}</td>
+                        <td>{{ student.fname }}</td>
+                        <td>{{ student.lname }}</td>
+                    </tr>
+                {% endfor %}
+
+                {% if students | length == 0 %}
+                    <tr>
+                        <td colspan="3" class='emptyList'>Empty List </td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class='section section--display'>
+        <h2>Quizzes:</h2>
+        <table >
+            <thead>
+                <th>ID</th>
+                <th>Subject</th>
+                <th>Questions</th>
+                <th>Date</th>
+            </thead>
+            <tbody>
+                 {% for quiz in quizzes %}
+                    <tr>
+                        <td>{{ quiz.id }}</td>
+                        <td>{{ quiz.subject }}</td>
+                        <td>{{ quiz.questions }}</td>
+                        <td>{{ quiz.date }}</td>
+                    </tr>
+                {% endfor %}
+
+                {% if quizzes | length == 0 %}
+                    <tr>
+                        <td colspan="4" class='emptyList'>Empty List </td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+
+
+{% endblock %}

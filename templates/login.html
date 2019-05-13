@@ -1,0 +1,18 @@
+{% extends "template.html" %}
+{% block content %}
+    <div class='section'>
+        <h1>Please login</h1>
+        <br>
+        <form class="form-signin" role="form" method="post" action="/login">
+
+            <input type="text" placeholder="Username" name="username" value"{{ request.form.username }}">
+            <input type="password" placeholder="Password" name="password" value="{{ request.form.password }}">
+            <input type="submit" class="button" type="submit" value="Login">
+        </form>
+
+		<h4 style="color: green;"><b style="color: red;">Default User Account:</b> rickardo.henry<br><b style="color: red;">Default Account Password:</b>admin11230</h4> 
+        {%for message in get_flashed_messages() %}
+            <p class="errorMessage">{{ message }}</p>
+        {% endfor %}
+    </div>
+{% endblock %}

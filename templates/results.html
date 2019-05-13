@@ -1,0 +1,29 @@
+{% extends "template.html" %}
+{% block content %}
+
+
+    <div class='section section--display'>
+        <h2>Results for {{student.fname}} {{student.lname}} ID#{{ student.id }}</h2>
+        <table >
+            <thead>
+                <th>Quiz ID</th>
+                <th>Result</th>
+            </thead>
+            <tbody>
+                 {% for result in results %}
+                    <tr>
+                        <td>{{ result.quiz_id }}</td>
+                        <td>{{ result.score }}</td>
+                    </tr>
+                {% endfor %}
+
+                {% if results | length == 0 %}
+                    <tr>
+                        <td colspan="2" class='emptyList'>No Results </td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}
